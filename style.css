@@ -25,7 +25,7 @@ html{
 body {
   font-size: 1.3rem;
   margin: 0;
-  background-color:#e9dfe5;/* background-color: rgb(228, 223, 205); 9ca98fff d7e0cbff*/
+  background-color:#ebdfc4;/* background-color: rgb(228, 223, 205); 9ca98fff d7e0cbff*/
 }
 
 h1{
@@ -35,7 +35,7 @@ h1{
 }
 h2{
   font-size: 7.0rem;
-  color: #c7744a4f;
+  color: #436b4637;
   margin: 0;
   
   font-family: "Poiret One", sans-serif;
@@ -48,7 +48,7 @@ h2{
 h3{
   font-size: 1.3rem;
   margin: 0;
-  color: #6e4e4e;
+  color: #634242d1;
   font-family: "Poiret One", sans-serif;
 }
 
@@ -225,7 +225,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background-color: #e7e7eb;
+    background-color: #f1ecdd;
 
 
 }
