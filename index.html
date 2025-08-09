@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poiret+One&display=swap" rel="stylesheet">    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/bc0e8530bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>さとこの部屋</title>
+
+</head>
+
+
+<body>
+  
+
+    <!-- ハンバーガーメニュー＆ナビゲーション -->
+  <header>    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+
+    <nav class="nav-menu" id="nav-menu">
+      <button class="close-btn" id="close-btn">×</button>
+      <ul>
+        <li><a href="#About_Us">About Us</a></li>
+        <li><a href="#Story">Story</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#access">Access</a></li>
+        <li><a href="#SHOP" class="btn">SHOP</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+      
+
+
+      
+        <div id="hero-section"><!-- トップ -->
+            <div class="hero-wrapper">
+                <img src="./img/top.jpg" alt="背景" class="bg-img">
+
+                <h1 class="site-title">さとこの部屋</h1>
+                <a href="オススメ映画.html" class="icon icon-movie"></a>
+                <a href="自然散策.html" class="icon icon-nature"></a>
+                <a href="着物.html" class="icon icon-kimono"></a>
+                <a href="移住計画.html" class="icon icon-move"></a>
+                <a href="養蜂.html" class="icon icon-bee"></a>
+                <a href="方眼ノート.html" class="icon icon-note"></a>
+                <a href="etc.html" class="icon icon-etc"></a>            
+            </div>
+        </div>
+    <main>
+        <div class="contents">
+            <div CategorySection id="CategorySection">
+                <div class="gp-title">
+                    <h2>Categoy</h2>
+                </div>
+                <ul class="category-list">
+                <li class="item">
+                    <img src="img/postcard.png" class="circle" alt="オススメ映画">
+                    <p class="subject">オススメ映画</p>
+                </li>
+                <li class="item">
+                    <img src="img/C_nature.png" class="circle" alt="自然散策">
+                    <p class="subject">自然散策</p>
+                </li>
+                <li class="item">
+                    <img src="img/C_mug.png" class="circle" alt="着物">
+                    <p class="subject">着物</p>
+                </li>
+
+                <li class="break" aria-hidden="true"></li> <!-- ここで改行 -->
+
+                <li class="item">
+                    <img src="img/move2.png" class="circle" alt="移住計画">
+                    <p class="subject">移住計画</p>
+                </li>
+                <li class="item">
+                    <img src="img/C_bee.png" class="circle" alt="養蜂">
+                    <p class="subject">養蜂</p>
+                </li>
+
+                <li class="break" aria-hidden="true"></li> <!-- ここで改行 -->
+
+                <li class="item">
+                    <img src="img/C_closed_notebook.png" class="circle" alt="方眼ノート">
+                    <p class="subject">方眼ノート</p>
+                </li>
+                <li class="item">
+                    <img src="img/C_ink-pen.png" class="circle" alt="思いつくままに">
+                    <p class="subject">思いつくままに</p>
+                </li>
+                <li class="item decoration" aria-hidden="true">
+                    <img src="img/natural5.png" alt="">
+                </li>
+                </ul>
+            </div>
+            <div GallerySection id="GallerySection">
+                <div class="Sctn-title">
+                    <h2>Gallery</h2>
+                </div>
+                <!-- Sliderを包むコンテナ要素 -->
+                <div class="img-photo_swiper">
+                    <!-- スライド要素を包む要素 -->
+                    <div class="swiper-wrapper">
+                        <!-- 各スライド -->
+                        <div class="swiper-slide">
+                        <img class = "slide_img" src="img/sample1.jpg" alt="サンプル">
+                        </div>
+                        <div class="swiper-slide">
+                        <img class = "slide_img" src="img/sample2.JPG" alt="サンプル">
+                        </div>
+                        <div class="swiper-slide">
+                        <img class = "slide_img" src="img/sample3.jpg" alt="サンプル">
+                        </div>
+                        <div class="swiper-slide">
+                        <img class = "slide_img" src="img/sample4.jpg" alt="サンプル">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div IntroSection id="IntroSection">
+                <div class="greeting">
+                    <div class="Sctn-title">
+                        <h2>Welcome</h2>
+                    </div>
+                    <div class="greeting-text">
+                        <p >
+                            こんにちは。ようこそ、さとこの部屋へ。<br>
+                            作業療法士の仕事をしながら、趣味や、日々の発見、思うことを気ままに綴っています。<br>    
+                            コメントも受け付けていますので、ぜひ、ご意見などもお聞かせください。お待ちしてます。<br>
+                            気に入っていただければぜひシェアもお願いします。
+
+                        </p>
+                    </div>
+                      <div class="sns-share">
+                        <a href="https://twitter.com/intent/tweet?url=https://example.com" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sharer/sharer.php?u=https://example.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-instagram"></i>
+                        </a>                        
+                        <a href="https://bsky.app/intent/compose?text=https://example.com" target="_blank" aria-label="Bluesky">
+                        <i class="fa-brands fa-bluesky"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="aboutme">
+                        <h3>ABOUT ME</h3>
+                        <p> 自己紹介をつらつらと書いておくスペース<br>
+                            自己紹介をつらつらと書いておくスペース<br>
+                            自己紹介をつらつらと書いておくスペース<br>
+                            自己紹介をつらつらと書いておくスペース<br>
+                            自己紹介をつらつらと書いておくスペース<br>
+                        </p>
+                    </div>
+                    <div class="widget search-widget">
+                        <h3>Search</h3>
+                        <form action="/search">
+                            <input type="text" name="q" placeholder="検索...">
+                            <button type="submit">🔍</button>
+                        </form>
+                    </div>
+
+                    <!-- NEW -->
+                    <div class="widget new-widget">
+                        <h3>NEW</h3>
+                        <ul>
+                            <li><a href="#">新着記事タイトル1</a></li>
+                            <li><a href="#">新着記事タイトル2</a></li>
+                            <li><a href="#">新着記事タイトル3</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- TAG -->
+                    <div class="widget tag-widget">
+                        <h3>TAG</h3>
+                        <ul class="tag-list">
+                            <li><a href="#">DIY</a></li>
+                            <li><a href="#">旅行</a></li>
+                            <li><a href="#">料理</a></li>
+                            <li><a href="#">猫</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+    </main>
+
+
+  <script>
+
+
+//ハンバーガーメニュー
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+  const closeBtn = document.getElementById("close-btn");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+    hamburger.style.display = "none";
+  });
+
+  // メニュー内のリンクをクリックしたら閉じる
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+    });
+  });
+
+
+
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.remove("open");
+  hamburger.style.display = "block"; 
+});
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger); // 必須！
+
+ScrollTrigger.matchMedia({
+
+  "(min-width: 768px)": function () {
+    gsap.to(".sticky1", {
+      y: 300,
+      scrollTrigger: {
+        trigger: ".sticky1",
+        start: "top 20%",
+        end: "+=1250",
+        scrub: true,
+        pin: true
+      }
+    });
+  },
+
+  "(max-width: 767px)": function () {
+    gsap.to(".sticky1", {
+      y: 100,
+      scrollTrigger: {
+        trigger: ".sticky1",
+        start: "top 20%",
+        end: "+=850",
+        scrub: true,
+        pin: true
+      }
+    });
+  }
+
+});
+
+
+
+
+    const photo_swiper = new Swiper(".img-photo_swiper",{
+      loop: true,
+      pagination: false,
+      speed: 12000, // ループの時間
+      allowTouchMove: false, // スワイプ無効
+      autoplay: {
+      delay: 0,
+      },
+      slidesPerView: 2,
+        breakpoints: {
+    // スマホ用
+    0: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 2.3
+    },
+    1440: {
+      slidesPerView: 3
+    }
+  },
+
+    });
+
+    const swiper = new Swiper(".swiper",{
+      loop: true, // ループするかどうか
+      slidesPerView: 2,
+    });
+    
+
+const mySwiper = new Swiper('.topics_swiper', {
+        // オプション設定
+        loop: true, // ループするかどうか
+        slidesPerView: 1,
+        breakpoints: {
+          // スマホ用
+          0: {
+            slidesPerView: 1
+          },
+          768: {
+            slidesPerView: 2
+          },
+          1440: {
+            slidesPerView: 3
+          }
+        },
+        pagination: {
+            el: '.topics-pagination',
+            clickable: true, // ページネーションをクリック可能にするかどうか
+        },
+        navigation: {
+            nextEl: '.topics_swiper .swiper-button-next',
+            prevEl: '.topics_swiper .swiper-button-prev'
+        }
+        });
+
+
+//fadein
+const fadeEls = document.querySelectorAll('.fade-in');
+
+const callback = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+};
+
+const observer = new IntersectionObserver(callback, {
+  threshold: 0.1
+});
+
+fadeEls.forEach(el => observer.observe(el));
+
+
+
+
+
+const fadeTextEls = document.querySelectorAll('.fade-text');
+
+const fadeTextObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0.3) {
+      console.log('🚀 発火！');
+      entry.target.classList.add('active');
+    }
+  });
+}, {
+  threshold: [0, 0.1, 1],
+  rootMargin: '0px 0px -10% 0px',
+});
+
+
+// 🔥 ここで observer に登録＋位置を手動チェック！
+fadeTextEls.forEach(el => {
+  fadeTextObserver.observe(el);
+
+  const rect = el.getBoundingClientRect();
+  const inView = rect.top < window.innerHeight && rect.bottom > 0;
+  //if (inView) {
+  //  console.log('👀 最初から見えてたので強制発火');
+   // el.classList.add('active');
+ // }
+});
+
+
+
+
+//fade-up
+const fadeUps = document.querySelectorAll('.fade-up');
+
+const fadeUpObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      // 一度だけ発火したい場合は以下を追加
+      fadeUpObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+fadeUps.forEach(el => fadeUpObserver.observe(el));
+
+
+
+  </script>
+</body>
+ </html>
