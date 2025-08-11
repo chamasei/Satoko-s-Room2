@@ -17,6 +17,11 @@ html{
   font-style: normal;
 }
 
+.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 /* CSSコード */
@@ -59,48 +64,330 @@ p{
   color:#444
 }
 
-header {
-  height: 300px;
-  display: fixed;
-  flex-direction: row;
-  position: fixed;
-  padding: 10px;
-  align-items: center;
-  background: transparent;
-  z-index: 9999; 
+
+
+.ghost-menu{
+  position: fixed !important; 
+  right: 10px !important;
+  top: 20px !important;
+  z-index: 1000 !important;
 }
 
-
-
-/* ここから下がハンバーガーメニューに関するCSS */
-
-.nav-menu {
-  position: static;
-  display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
-  height: auto;
-  top: auto;
-}
-
-.hamburger {
-  display: none;
-}
-
-.nav-menu ul {
-  flex-direction: row;
-  align-items: center;
-  list-style:none
+.menu-badge{
+  display:block; border:none; background: transparent; padding: 0; cursor: pointer;
+  width: 130px; height: 130px;
+  filter: drop-shadow(0 10px 10px rgba(84, 52, 32, 0.819));
   
 }
+.menu-badge img{ 
+  width:100%; 
+  height:100%; 
+  object-fit: contain; 
+  opacity:.85; 
+  transition: opacity .2s;
+  transform-origin: 50% 60%;
+  animation: butterfly-flutter 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
-.nav-menu a{
-  color: #ffffff;
-  text-decoration: none;
+@keyframes butterfly-flutter {
+  0% {
+    transform: rotate(-3deg) scale(1) translateX(0%) translateY(0px) scaleX(1);
+  }
+  2% {
+    transform: rotate(-5deg) scale(1.01) translateX(-2%) translateY(-4px) scaleX(1);
+  }
+  4% {
+    transform: rotate(-2deg) scale(0.99) translateX(-4%) translateY(-8px) scaleX(1);
+  }
+  6% {
+    transform: rotate(-6deg) scale(1.02) translateX(-6%) translateY(-12px) scaleX(1);
+  }
+  8% {
+    transform: rotate(-1deg) scale(0.98) translateX(-8%) translateY(-16px) scaleX(1);
+  }
+  10% {
+    transform: rotate(-4deg) scale(1.01) translateX(-10%) translateY(-20px) scaleX(1);
+  }
+  12% {
+    transform: rotate(-7deg) scale(0.99) translateX(-12%) translateY(-24px) scaleX(1);
+  }
+  14% {
+    transform: rotate(-3deg) scale(1.02) translateX(-14%) translateY(-28px) scaleX(1);
+  }
+  16% {
+    transform: rotate(-5deg) scale(0.98) translateX(-16%) translateY(-32px) scaleX(1);
+  }
+  18% {
+    transform: rotate(-2deg) scale(1.01) translateX(-18%) translateY(-36px) scaleX(1);
+  }
+  20% {
+    transform: rotate(-6deg) scale(0.99) translateX(-20%) translateY(-40px) scaleX(1);
+  }
+  22% {
+    transform: rotate(-1deg) scale(1.02) translateX(-22%) translateY(-44px) scaleX(1);
+  }
+  24% {
+    transform: rotate(-4deg) scale(0.98) translateX(-24%) translateY(-48px) scaleX(1);
+  }
+  26% {
+    transform: rotate(-7deg) scale(1.01) translateX(-26%) translateY(-52px) scaleX(1);
+  }
+  28% {
+    transform: rotate(-3deg) scale(0.99) translateX(-28%) translateY(-56px) scaleX(1);
+  }
+  30% {
+    transform: rotate(-5deg) scale(1.02) translateX(-30%) translateY(-60px) scaleX(1);
+  }
+  31% {
+    transform: rotate(-2deg) scale(0.98) translateX(-30%) translateY(-60px) scaleX(-1);
+  }
+  34% {
+    transform: rotate(-6deg) scale(1.01) translateX(-28%) translateY(-52px) scaleX(-1);
+  }
+  36% {
+    transform: rotate(-1deg) scale(0.99) translateX(-26%) translateY(-44px) scaleX(-1);
+  }
+  38% {
+    transform: rotate(-4deg) scale(1.02) translateX(-24%) translateY(-36px) scaleX(-1);
+  }
+  40% {
+    transform: rotate(-7deg) scale(0.98) translateX(-22%) translateY(-28px) scaleX(-1);
+  }
+  42% {
+    transform: rotate(-3deg) scale(1.01) translateX(-20%) translateY(-20px) scaleX(-1);
+  }
+  44% {
+    transform: rotate(-5deg) scale(0.99) translateX(-18%) translateY(-12px) scaleX(-1);
+  }
+  46% {
+    transform: rotate(-2deg) scale(1.02) translateX(-16%) translateY(-4px) scaleX(-1);
+  }
+  48% {
+    transform: rotate(-6deg) scale(0.98) translateX(-14%) translateY(4px) scaleX(-1);
+  }
+  50% {
+    transform: rotate(-1deg) scale(1.01) translateX(-12%) translateY(12px) scaleX(-1);
+  }
+  52% {
+    transform: rotate(-4deg) scale(0.99) translateX(-10%) translateY(20px) scaleX(-1);
+  }
+  54% {
+    transform: rotate(-7deg) scale(1.02) translateX(-8%) translateY(28px) scaleX(-1);
+  }
+  56% {
+    transform: rotate(-3deg) scale(0.98) translateX(-6%) translateY(36px) scaleX(-1);
+  }
+  58% {
+    transform: rotate(-5deg) scale(1.01) translateX(-4%) translateY(44px) scaleX(-1);
+  }
+  60% {
+    transform: rotate(-2deg) scale(0.99) translateX(-2%) translateY(52px) scaleX(-1);
+  }
+  62% {
+    transform: rotate(-6deg) scale(1.02) translateX(0%) translateY(60px) scaleX(-1);
+  }
+  64% {
+    transform: rotate(-1deg) scale(0.98) translateX(2%) translateY(52px) scaleX(-1);
+  }
+  66% {
+    transform: rotate(-4deg) scale(1.01) translateX(4%) translateY(44px) scaleX(-1);
+  }
+  68% {
+    transform: rotate(-7deg) scale(0.99) translateX(6%) translateY(36px) scaleX(-1);
+  }
+  70% {
+    transform: rotate(-3deg) scale(1.02) translateX(8%) translateY(28px) scaleX(-1);
+  }
+  72% {
+    transform: rotate(-5deg) scale(0.98) translateX(10%) translateY(20px) scaleX(-1);
+  }
+  74% {
+    transform: rotate(-2deg) scale(1.01) translateX(12%) translateY(12px) scaleX(-1);
+  }
+  76% {
+    transform: rotate(-6deg) scale(0.99) translateX(14%) translateY(4px) scaleX(-1);
+  }
+  78% {
+    transform: rotate(-1deg) scale(1.02) translateX(16%) translateY(-4px) scaleX(-1);
+  }
+  80% {
+    transform: rotate(-4deg) scale(0.98) translateX(18%) translateY(-12px) scaleX(-1);
+  }
+  82% {
+    transform: rotate(-7deg) scale(1.01) translateX(20%) translateY(-20px) scaleX(-1);
+  }
+  83% {
+    transform: rotate(-3deg) scale(0.99) translateX(20%) translateY(-20px) scaleX(1);
+  }
+  84% {
+    transform: rotate(-5deg) scale(1.02) translateX(18%) translateY(-12px) scaleX(1);
+  }
+  86% {
+    transform: rotate(-2deg) scale(0.98) translateX(16%) translateY(-4px) scaleX(1);
+  }
+  88% {
+    transform: rotate(-6deg) scale(1.01) translateX(14%) translateY(4px) scaleX(1);
+  }
+  90% {
+    transform: rotate(-1deg) scale(0.99) translateX(12%) translateY(12px) scaleX(1);
+  }
+  92% {
+    transform: rotate(-4deg) scale(1.02) translateX(10%) translateY(20px) scaleX(1);
+  }
+  94% {
+    transform: rotate(-7deg) scale(0.98) translateX(8%) translateY(28px) scaleX(1);
+  }
+  96% {
+    transform: rotate(-3deg) scale(1.01) translateX(4%) translateY(36px) scaleX(1);
+  }
+  98% {
+    transform: rotate(-5deg) scale(0.99) translateX(2%) translateY(44px) scaleX(1);
+  }
+  100% {
+    transform: rotate(-3deg) scale(1) translateX(0%) translateY(0px) scaleX(1);
+  }
 }
-#close-btn {
-  display: none;
+
+.menu-badge:hover img,
+.ghost-menu:focus-within .menu-badge img{ 
+  opacity: 1;
+  animation: butterfly-hover 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
 }
+
+@keyframes butterfly-hover {
+  0% {
+    transform: rotate(-3deg) scale(1.05) translateX(-6%) translateY(-12px) scaleX(1);
+  }
+  5% {
+    transform: rotate(-5deg) scale(1.06) translateX(-9%) translateY(-4px) scaleX(1);
+  }
+  10% {
+    transform: rotate(-2deg) scale(1.07) translateX(-12%) translateY(8px) scaleX(1);
+  }
+  15% {
+    transform: rotate(-6deg) scale(1.08) translateX(-15%) translateY(-8px) scaleX(1);
+  }
+  20% {
+    transform: rotate(-1deg) scale(1.09) translateX(-18%) translateY(4px) scaleX(1);
+  }
+  25% {
+    transform: rotate(-4deg) scale(1.08) translateX(-21%) translateY(-12px) scaleX(1);
+  }
+  30% {
+    transform: rotate(-7deg) scale(1.07) translateX(-24%) translateY(8px) scaleX(1);
+  }
+  35% {
+    transform: rotate(-3deg) scale(1.06) translateX(-27%) translateY(-4px) scaleX(1);
+  }
+  40% {
+    transform: rotate(-5deg) scale(1.05) translateX(-30%) translateY(12px) scaleX(1);
+  }
+  42% {
+    transform: rotate(-2deg) scale(1.05) translateX(-30%) translateY(0px) scaleX(-1);
+  }
+  50% {
+    transform: rotate(-6deg) scale(1.06) translateX(-27%) translateY(-8px) scaleX(-1);
+  }
+  55% {
+    transform: rotate(-1deg) scale(1.07) translateX(-24%) translateY(4px) scaleX(-1);
+  }
+  60% {
+    transform: rotate(-4deg) scale(1.08) translateX(-21%) translateY(-12px) scaleX(-1);
+  }
+  65% {
+    transform: rotate(-7deg) scale(1.09) translateX(-18%) translateY(8px) scaleX(-1);
+  }
+  70% {
+    transform: rotate(-3deg) scale(1.08) translateX(-15%) translateY(-4px) scaleX(-1);
+  }
+  75% {
+    transform: rotate(-5deg) scale(1.07) translateX(-12%) translateY(12px) scaleX(-1);
+  }
+  77% {
+    transform: rotate(-2deg) scale(1.06) translateX(-12%) translateY(0px) scaleX(1);
+  }
+  80% {
+    transform: rotate(-6deg) scale(1.05) translateX(-9%) translateY(-8px) scaleX(1);
+  }
+  85% {
+    transform: rotate(-1deg) scale(1.06) translateX(-6%) translateY(4px) scaleX(1);
+  }
+  90% {
+    transform: rotate(-4deg) scale(1.07) translateX(-3%) translateY(-12px) scaleX(1);
+  }
+  95% {
+    transform: rotate(-2deg) scale(1.06) translateX(-1.5%) translateY(8px) scaleX(1);
+  }
+  100% {
+    transform: rotate(-3deg) scale(1.05) translateX(-6%) translateY(-12px) scaleX(1);
+  }
+}
+
+
+.paper-menu ul{ list-style:none; margin:0; padding:0 }
+.paper-menu a{
+  display:block; padding:.55rem .6rem; border-radius:10px;
+  color:#222; font-family: 'Amatic SC', cursive; font-size: 1.2em; font-weight:600; letter-spacing:.02em; text-decoration:none;
+}
+.paper-menu a:hover{ background: rgba(0,0,0,.06) }
+
+
+
+/* 開閉（縦方向に隠すよう修正） */
+.paper-menu{
+  position: absolute; right: 72px; top: 0;
+  min-width: 220px;
+  opacity: 0; pointer-events: none;
+  transform: translateY(6px) rotateZ(-2deg);
+  transition: opacity .18s ease, transform .22s ease, clip-path .32s ease;
+  clip-path: inset(92% 0 0 0);   /* ← 下を92%隠す＝上だけ細く見える */
+}
+.ghost-menu.open .paper-menu{
+  opacity: 1; pointer-events: auto;
+  transform: translateY(0) rotateZ(0);
+  clip-path: inset(0 0 0 0);
+}
+
+/* 見た目（切り抜きPNG1枚＋巻き口の変数） */
+.ghost-menu .paper-menu{
+  position: relative;
+  background: url('img/menu_tex.png') center / contain no-repeat;
+  background-color: transparent;
+  color: #2f1b0c;
+  box-shadow: 0 18px 38px rgba(0,0,0,.18);
+  padding: 1.1rem 1.3rem;
+  border-radius: 0;
+  overflow: visible;
+
+  --roll-h: 40px;   /* 巻き口の高さ */
+  --roll-o: .95;    /* 巻き口の濃さ */
+  --roll-w: 28px;   /* 巻き口の幅（左右の余白） */
+}
+
+/* 巻き口（上辺の筒っぽいハイライト） */
+.ghost-menu .paper-menu::before{
+  content: "";
+  position: absolute; 
+  left: calc(-1 * var(--roll-w)); 
+  right: calc(-1 * var(--roll-w)); 
+  top: 0;
+  height: var(--roll-h);
+  opacity: var(--roll-o);
+  border-bottom-left-radius: 50% 60%;
+  border-bottom-right-radius: 50% 60%;
+  background:
+    radial-gradient(120% 120% at 50% -20%, rgba(255,255,255,.7),
+                    rgba(0,0,0,.15) 60%, transparent 70%),
+    linear-gradient(#efe3bf, #d9c89e);
+  box-shadow: 0 6px 12px rgba(0,0,0,.18);
+  transform: translateY(-2px);
+  z-index: 1;
+  pointer-events: none;
+}
+/* 中身は最前面 */
+.ghost-menu .paper-menu > *{ position: relative; z-index: 2; }
+
+
 /* CSSコード */
 
 main{
@@ -130,8 +417,7 @@ main{
 }
 
 .hero-wrapper img {
-  width:100%;
-  height: auto;
+
   background-position:top;
 
 }
@@ -139,6 +425,8 @@ main{
 .bg-img {
   width: 100%;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .site-title {
@@ -148,75 +436,280 @@ main{
   font-size: 2.5rem;
   font-family: 'Georgia', serif;
   color: #444;
+  z-index: 5;
 }
 
 .icon {
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
-  filter: drop-shadow(0px 10px 10px rgba(93, 62, 32, 0.5));
-  cursor: pointer;
+  filter: drop-shadow(0px 20px 10px rgba(93, 54, 32, 0.5));
+  z-index: 4;
 }
 
-.icon-movie {
-  top: 12%;
+
+.postcard {
+  position: absolute; /* 今までの配置ルールに合わせて */
+  display: block;
+  width: 15%;            /* クリック範囲＆画像サイズ */
+  height: 40%;
+
+  cursor: pointer;
+  pointer-events: auto; 
+  top: 18%;
   left: -5%;
-  background-image: url('img/postcard.png');
-  width: 30%;
-  height: 30%;
+  z-index: 10;  
+}
+
+.postcard > * { pointer-events: none; } 
+
+.postcard img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none; 
+}
+
+.postcard .normal {
+  position: absolute;
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 0.6s ease-out; /* ← 戻る時はゆっくり */
+}
+
+
+.postcard .peel {
+  opacity: 0;
+  transition: transform 0.8s ease-in, opacity 0.6s ease-in;
+}
+
+.postcard:hover .normal {
+  opacity: 0; 
+   transition: opacity 0.4s ease-out;
+
+}
+
+.postcard:hover .peel {
+  opacity: 1;
+  transition: transform 0.4s ease-out, opacity 0.2s ease-out;
+  
 }
 
 .icon-nature {
   bottom: -1%;
-  right: 13%;
+  right: 18%;
   background-image: url('img/nature.png');
   width: 25%;
-  height:25%;
-
+  height: 25%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: 40% 80%; /* ←下の方を支点に（90〜100%あたり） */ 
+  will-change: transform;
 }
 
-.icon-kimono {
-  bottom: 16%;
-  left: 25%;
-  background-image: url('img/mug.png');
-  width: 13%;
-  height: 13%;
+
+.mug {
+  position:absolute; 
+  bottom:5%; 
+  left:5%; 
+  width:15%; /* 位置は%で */
+  aspect-ratio: 1 / 1; /* 画像比率に合わせて調整 */
+  display:block;  
 }
+
+.mug img {
+  position:absolute; 
+  inset:0; 
+  width:100%; 
+  height:100%; 
+  object-fit:contain; 
+  pointer-events:none;
+}
+
+.mug .inside  { 
+  z-index: 1; 
+}      /* 後ろ */
+
+
+.mug .kobito  {
+  z-index: 2;
+  opacity: 1;                       /* 透明アニメは使わない */
+  transform: translateY(50%);       /* ふちの下に潜らせる量を微調整 */
+  transition: transform .55s cubic-bezier(.2,.8,.2,1);
+}
+.mug:hover .kobito{ 
+  transform: translateY(0); 
+}
+
+.mug .outside { 
+  z-index: 3; 
+}      /* 前（ふち含む） */
 
 .icon-move {
-  top: 26%;
-  left: 33%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
   background-image: url(img/move.png);
-  width: 20%;
-  height: 20%;
+  width: 100%;
+  height: 150%;
 
+
+}
+
+.hotspot-mountain {
+  position: absolute;
+  left: 25%; 
+  top: 13%; 
+  width: 20%; 
+  height: 12%;
+  z-index: 3;   
+        /* 背景より上 */
+}
+
+
+.rainbow {
+  position: absolute;
+  left: 0%;    /* 山ふもとの位置に合わせて */
+  top: -50%;
+  width: 100%;
+  height:auto;   /* 大きさ調整 */
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: opacity 1s ease; /* フワッと出る */
+
+}
+
+/* ホバー時に虹が出る */
+.icon-move:hover ~ .rainbow {
+  opacity: 1;
 }
 
 .icon-bee {
-  bottom: 44%;
-  right: 10%;
+  bottom: 45%;
+  right: 8%;
   background-image: url('img/bee.png');
   width: 8%;
   height: 8%;
+  position:absolute; /* 既にabsoluteなら不要 */
+  position: absolute; /* 既にabsoluteならOK */
+  transform: translate(var(--x,0px), var(--y,0px));
+  will-change: transform;      
 }
 
-.icon-note {
-  bottom: -3%;
-  left:30%;
-  background-image: url('img/closed_notebook.png');
-  width:20%;
-  height: 20%;
+
+/* 花で休んでる間にほんの少し羽ばたく（任意） */
+.bee-rest{
+  animation: wing 0.12s linear infinite alternate;
+}
+@keyframes wing{
+  from{ transform: translate(var(--x),var(--y)) rotate(-1deg); }
+  to  { transform: translate(var(--x),var(--y)) rotate(1deg); }
+}
+
+
+.notebook {
+  position: absolute; /* 背景に合わせる場合 */
+  bottom: 3%;
+  left:15%;
+  width: 30%; /* サイズ調整 */
+  height: auto;
+  aspect-ratio: 782 / 517; 
+  display: block;
+  cursor: pointer;
+  z-index:10;
 
 }
 
-.icon-etc {
-  bottom: 9%;
-  left: 43%;
-  background-image: url('img/ink-pen.png');
-  width: 20%;
-  height: 20%;
+.notebook img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:contain;
+  pointer-events:none;       /* クリックは親へ */
+  will-change:opacity,transform;
 }
 
+.notebook .half{
+  opacity:0;
+  transform-origin:left center;         /* 綴じ目側を支点に */
+  transition: opacity .30s ease-out,    /* 出すとき速く */
+              transform .30s ease-out;
+}
+
+/* 閉じた表紙はhoverで薄く */
+.notebook .closed{
+  opacity:1;
+  transition: opacity .55s ease-out;    /* 戻りはゆっくり */
+}
+
+/* ホバー時：半開きを出す＋ほんの少しだけ“開く” */
+.notebook:hover .half{
+  opacity:1;
+  transform: rotateY(-6deg);            /* スペースに余裕なければ 0〜-4deg 程度 */
+}
+.notebook:hover .closed{
+  opacity:0;
+}
+
+/* ちらつき対策：hover解除時、halfの消え始めを0.1s遅らせる */
+.notebook:not(:hover) .half{ transition-delay:.1s; }
+
+.icon-pen .ink{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.icon-pen{
+  position: absolute;
+  bottom: 12%;
+  right: 45%;
+  width: 18%;
+  height: 18%;
+  overflow: visible;         /* ← ペンが少しはみ出しても見えるように */
+}
+
+.icon-pen .pen{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 70% 90%; /* ペン先寄りを支点に（好みで微調整） */
+  will-change: transform;
+  pointer-events: none;
+}
+
+.floating-msg{
+  position: absolute;               /* 画面じゃなく .hero の中で中央に */
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%) rotate(-10deg);
+
+  font-family:  "Rock Salt", cursive;
+  font-size: clamp(42px, 3.2vw, 36px);
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: .25em .6em;
+  background: transparent;
+  color: #b85b15;
+  opacity: 0;                       /* 普段は非表示 */
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 2;
+  will-change: clip-path, opacity, transform;
+
+}
+
+.floating-msg .char{
+  display: inline-block;
+  will-change: transform, opacity;
+}
 .contents{
     width: 900px;
     height: auto;
@@ -549,81 +1042,89 @@ h1{
   
   /* ここから下がハンバーガーメニューに関するCSS */
   
-  .nav-menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color:#491803c5; /* ← これが覆ってる背景色だと思う！ */
-    z-index: 9999;
-    transition: top 0.3s ease;
+@media (max-width: 768px){
+  .ghost-menu{ 
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  
-  .nav-menu.open {
-    top: 0;
+  .menu-badge{ 
+    width: 54px; 
+    height: 54px; 
   }
-
-
-  .hamburger {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 40px ;
-    height: 40px;
-    z-index: 99999;
-    padding: 0;
+  .menu-badge img {
+    animation: butterfly-flutter-mobile 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
-  
-  .hamburger span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    background-color:#491803;
-    margin: 5px auto;
+}
 
+@keyframes butterfly-flutter-mobile {
+  0% {
+    transform: rotate(-3deg) scale(1) translateX(0%) translateY(0px) scaleX(1);
   }
-  
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    color:#ffffff;
-    cursor: pointer;
-    z-index: 10001;
+  5% {
+    transform: rotate(-4deg) scale(1.005) translateX(-3%) translateY(-8px) scaleX(1);
   }
-  
-  .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 50px 20px;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-
+  10% {
+    transform: rotate(-5deg) scale(1.01) translateX(-6%) translateY(-12px) scaleX(1);
   }
-
-  .nav-menu a {
-    color: #ffffff;
-    line-height: 2.5rem;
-    border-bottom: 1px solid  #ffffff;
-    text-decoration: none;
-    display: block;
-    text-align: right;
-    
+  15% {
+    transform: rotate(-3deg) scale(0.995) translateX(-9%) translateY(4px) scaleX(1);
   }
-
-  .hero-img {
-
-    background-position: center;
+  20% {
+    transform: rotate(-2deg) scale(0.99) translateX(-12%) translateY(8px) scaleX(1);
   }
-  
-
+  25% {
+    transform: rotate(-6deg) scale(1.005) translateX(-15%) translateY(-4px) scaleX(1);
+  }
+  27% {
+    transform: rotate(-1deg) scale(0.998) translateX(-15%) translateY(0px) scaleX(-1);
+  }
+  35% {
+    transform: rotate(-4deg) scale(1.002) translateX(-12%) translateY(-8px) scaleX(-1);
+  }
+  40% {
+    transform: rotate(-2deg) scale(0.995) translateX(-9%) translateY(4px) scaleX(-1);
+  }
+  45% {
+    transform: rotate(-5deg) scale(1.005) translateX(-6%) translateY(-4px) scaleX(-1);
+  }
+  50% {
+    transform: rotate(-3deg) scale(1) translateX(-3%) translateY(0px) scaleX(-1);
+  }
+  55% {
+    transform: rotate(-1deg) scale(0.998) translateX(0%) translateY(-8px) scaleX(-1);
+  }
+  60% {
+    transform: rotate(-4deg) scale(1.002) translateX(3%) translateY(4px) scaleX(-1);
+  }
+  65% {
+    transform: rotate(-2deg) scale(0.995) translateX(6%) translateY(-4px) scaleX(-1);
+  }
+  70% {
+    transform: rotate(-5deg) scale(1.005) translateX(9%) translateY(0px) scaleX(-1);
+  }
+  72% {
+    transform: rotate(-3deg) scale(0.998) translateX(9%) translateY(0px) scaleX(1);
+  }
+  75% {
+    transform: rotate(-1deg) scale(1.002) translateX(6%) translateY(-8px) scaleX(1);
+  }
+  80% {
+    transform: rotate(-4deg) scale(0.995) translateX(3%) translateY(4px) scaleX(1);
+  }
+  85% {
+    transform: rotate(-2deg) scale(1.005) translateX(0%) translateY(-4px) scaleX(1);
+  }
+  90% {
+    transform: rotate(-3deg) scale(0.998) translateX(-1.5%) translateY(0px) scaleX(1);
+  }
+  95% {
+    transform: rotate(-1deg) scale(1.002) translateX(-0.6%) translateY(-4px) scaleX(1);
+  }
+  100% {
+    transform: rotate(-3deg) scale(1) translateX(0%) translateY(0px) scaleX(1);
+  }
+}
 
   
 }
